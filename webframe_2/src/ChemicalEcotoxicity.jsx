@@ -19,6 +19,7 @@ import {
 const ChemicalEcotoxicity = () => {
   const [loading, setLoading] = useState(true);
   const [isRunClicked, setIsRunClicked] = useState(false);
+  const [hc50Value, setHc50Value] = useState(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2000);
@@ -29,22 +30,33 @@ const ChemicalEcotoxicity = () => {
     setIsRunClicked(true);
   };
 
-  const props = {
-    name: "file",
-    action: "https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload",
-    headers: {
-      authorization: "authorization-text",
-    },
-    onChange(info) {
-      if (info.file.status !== "uploading") {
-        console.log(info.file, info.fileList);
-      }
-      if (info.file.status === "done") {
-        message.success(`${info.file.name} file uploaded successfully`);
-      } else if (info.file.status === "error") {
-        message.error(`${info.file.name} file upload failed.`);
-      }
-    },
+  const handleFileChange = async (info) => {
+    if (info.file.status === "uploading") {
+      return;
+    }
+    if (info.file.status === "done") {
+      message.success(`${info.file.name} file uploaded successfully`);
+    } else if (info.file.status === "error") {
+      message.error(`${info.file.name} file upload failed.`);
+    }
+  };
+
+  const customRequest = async ({ file, onSuccess, onError }) => {
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+
+      await axios.post("http://localhost:3000/api/upload", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
+      onSuccess("OK");
+    } catch (err) {
+      console.error("Error uploading file: ", err);
+      onError(err);
+    }
   };
 
   const cardStyle = {
@@ -76,8 +88,8 @@ const ChemicalEcotoxicity = () => {
       <Skeleton loading={loading} active>
         <Card style={cardStyle}>Chemical Ecotoxicity</Card>
       </Skeleton>
-      <Upload {...props}>
-        <Button icon={<UploadOutlined />}>Click to Upload</Button>
+      <Upload customRequest={customRequest} onChange={handleFileChange}>
+        <Button>Click to Upload</Button>
       </Upload>
       <Button
         type="primary"
@@ -94,7 +106,7 @@ const ChemicalEcotoxicity = () => {
               <Card bordered={false} style={statisticCardStyle}>
                 <Statistic
                   title="HC50 Value"
-                  value={11.28}
+                  value={hc50Value}
                   precision={2}
                   valueStyle={{
                     color: "#3f8600",
