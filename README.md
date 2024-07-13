@@ -17,7 +17,7 @@ Before you start, ensure you have the following installed on your PC:
 *   Click on the LTS (Long Term Support) version and download the installer.
 *   Run the installer and follow the prompts to complete the installation.
 
-1.  **Git Installation**
+2.  **Git Installation**
 
 *   Go to the [Git website](https://git-scm.com/).
 *   Click on the download link suitable for your operating system.
@@ -31,7 +31,7 @@ Before you start, ensure you have the following installed on your PC:
 *   On Mac: Open the Terminal application from the Applications folder.
 *   On Linux: Open the Terminal from the system menu.
 
-1.  **Navigate to the Desired Directory**
+2.  **Navigate to the Desired Directory**
 
 *   Use the `cd` command to change to the directory where you want to clone the repository. For example:
 
@@ -39,7 +39,7 @@ Before you start, ensure you have the following installed on your PC:
 cd path to your directory
 ```
 
-1.  **Clone the Repository**
+3.  **Clone the Repository**
 
 *   Copy the repository URL from your Git hosting service (e.g., GitHub).
 *   In the command prompt/terminal, type:
