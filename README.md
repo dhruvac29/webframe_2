@@ -62,7 +62,21 @@ npm install
 ```
 *   This command will read the `package.json` file and install all the dependencies listed.
 
-### Step 5: Start the Development Server
+### Step 5: Install "antd" Dependency
+
+*   Install the "antd" dependencies for the project by running:
+```
+npm install antd
+```
+
+### Step 6: Install "react-router-dom" Dependency
+
+*   Install the "react-router-dom" dependencies for the project by running:
+```
+npm i react-router-dom
+```
+
+### Step 7: Start the Development Server
 
 *   To start the development server and run the project, type:
 ```
