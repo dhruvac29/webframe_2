@@ -1,0 +1,28 @@
+/* Model.css */
+
+/* Center the content with padding */
+.model-container {
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  height: 82vh;
+}
+
+/* Style the card with specific dimensions and flexbox properties */
+.model-card {
+  width: 300px;
+  height: 200px;
+  margin: 150px auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f2f5;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+}
+
+/* Style the skeleton component */
+.skeleton-active {
+  width: 100%;
+  height: 100%;
+}

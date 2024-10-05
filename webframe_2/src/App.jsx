@@ -28,7 +28,7 @@ const App = () => {
           </div>
         </Content>
         <Footer className="footer">
-          © {new Date().getFullYear()} Ecotoxicity. All rights reserved.
+          © {new Date().getFullYear()} All rights reserved
         </Footer>
       </Layout>
     </Router>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Select } from "antd";
 import { useNavigate } from "react-router-dom";
+import "./App.css"; // Import the CSS file
 
 const { Option } = Select;
 
@@ -15,25 +16,12 @@ const ChemicalEcotoxicity = () => {
     }
   };
 
-  const cardStyle = {
-    width: 300,
-    height: 150,
-    margin: "50px auto",
-    marginBottom: "20px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#f0f2f5",
-    border: "1px solid #d9d9d9",
-    cursor: "pointer",
-  };
-
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <Card style={cardStyle}>Chemical Ecotoxicity</Card>
+    <div className="chemical-ecotoxicity-container">
+      <Card className="chemical-ecotoxicity-card">Chemical Ecotoxicity</Card>
       <Select
         defaultValue=""
-        style={{ width: 200, marginBottom: 20 }}
+        className="chemical-ecotoxicity-select"
         onChange={handleOptionChange}
       >
         <Option value="">Select an option</Option>
