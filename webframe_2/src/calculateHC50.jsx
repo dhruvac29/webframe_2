@@ -440,7 +440,7 @@ const CalculateHC50 = () => {
             ...downloadButtonStyle,
           }}
         >
-          Download Data File
+          Download Sample Data
         </Button>
       </div>
       <Upload
@@ -459,12 +459,12 @@ const CalculateHC50 = () => {
       </Button>
       {isRunClicked && csvUrl && (
         <div style={centeredStyle}>
-          <a href={csvUrl} download="modified_hc50_value.csv">
+          <a href={csvUrl} download="predicted_hc50_value.csv">
             <Button
               icon={<ArrowDownOutlined />}
               style={{ marginTop: "20px", ...downloadButtonStyle }}
             >
-              Download Predicted CSV
+              Download Predicted HC50
             </Button>
           </a>
         </div>
@@ -478,7 +478,7 @@ const CalculateHC50 = () => {
             bordered
             title={() => (
               <div style={{ fontWeight: "bold", fontSize: "24px" }}>
-                Auto Encoder Function Output
+                Predicted HC50 values using autoencoder model
               </div>
             )}
           />
