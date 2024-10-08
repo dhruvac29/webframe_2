@@ -11,12 +11,12 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Intro title="Title" />} />
-      <Route path="/model" element={<Model title="Title" />} />
+      <Route path="/model" element={<ChemicalEcotoxicity title="Title" />} />
       <Route path="/contact" element={<Contact title="Title" />} />
-      <Route
+      {/* <Route
         path="/chemical-ecotoxicity"
         element={<ChemicalEcotoxicity title="Chemical Ecotoxicity" />}
-      />
+      /> */}
       <Route
         path="/chemical-ecotoxicity/calculate-hc50"
         element={<CalculateHC50 />}
