@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Skeleton } from "antd";
+import { Skeleton, Alert } from "antd";
 import "./App.css"; // Import the CSS file
 import diagramImg from "./assets/Picture1.png";
 import NetworkImg from "./assets/Network.png";
@@ -15,6 +15,16 @@ const Intro = () => {
   return (
     <>
       <div className="home-container">
+        {!loading && (
+          <Alert
+            message="Website Under Construction"
+            description="We're still working on this website. Some features may not be fully functional yet."
+            type="info"
+            showIcon
+            closable
+            style={{ marginBottom: "20px" }}
+          />
+        )}
         {loading ? (
           <Skeleton active paragraph={{ rows: 6 }} />
         ) : (
