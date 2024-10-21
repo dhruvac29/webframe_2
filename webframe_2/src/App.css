@@ -157,6 +157,14 @@
   margin-top: 0%;
 }
 
+.footnote {
+  font-size: 20px;
+  /* font-style: italic; */
+  font-weight: bold;
+  margin-top: 0;
+  padding: 15px;
+}
+
 .small-text {
   font-size: 17px;
 }
