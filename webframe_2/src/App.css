@@ -144,7 +144,7 @@
 
 .diagram-image {
   margin: 0 auto;
-  max-width: 68%;
+  max-width: 65%;
   vertical-align: middle;
   display: inline-block;
   height: auto;
@@ -152,12 +152,13 @@
 }
 
 .large-text {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
+  margin-top: 0%;
 }
 
 .small-text {
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .medium-text {
