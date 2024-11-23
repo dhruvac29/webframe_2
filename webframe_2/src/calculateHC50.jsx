@@ -20,7 +20,7 @@ const CalculateHC50 = () => {
   const handleRunClick = async () => {
     try {
       const response = await axios.get(
-        "https://cyx18z5nv0.execute-api.us-east-1.amazonaws.com/presigned"
+        `${import.meta.env.VITE_API_PREFIX}/presigned`
       );
 
       if (response.status === 200) {
@@ -34,7 +34,7 @@ const CalculateHC50 = () => {
         if (response2.status === 200) {
           try {
             const lambdaResponse = await axios.post(
-              "https://22ctltstdh.execute-api.us-east-1.amazonaws.com/prod/analyze",
+              `${import.meta.env.VITE_ANALYZE_API}/prod/analyze`,
               { fileName: key }
             );
 
