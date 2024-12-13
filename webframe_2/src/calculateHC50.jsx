@@ -157,10 +157,8 @@ const CalculateHC50 = () => {
   };
 
   const cardStyle = {
-    width: 300,
-    height: 150,
-    margin: "50px auto",
-    marginBottom: "20px",
+    width: "100%",
+    margin: "10px 0",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
