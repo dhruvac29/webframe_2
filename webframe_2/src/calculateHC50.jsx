@@ -129,7 +129,7 @@ const CalculateHC50 = () => {
       align: "center",
     },
     {
-      title: "HC50 Value",
+      title: "HC50 Value (log)",
       dataIndex: "value",
       key: "value",
       width: 100,
@@ -234,7 +234,7 @@ const CalculateHC50 = () => {
             bordered
             title={() => (
               <div style={{ fontWeight: "bold", fontSize: "24px" }}>
-                Predicted HC50 values using autoencoder model
+                Predicted HC50 Values(log) using autoencoder model
               </div>
             )}
           />
