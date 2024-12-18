@@ -1,0 +1,15 @@
+.draw-structure-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.structure-card {
+  width: 100%;
+  height: 80vh;
+}
+
+.structure-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

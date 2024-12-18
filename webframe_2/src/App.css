@@ -94,6 +94,8 @@ body {
   color: #fff;
   width: 100%;
   border-top: 2px solid #1890ff;
+  height: 60px;
+  margin-top: auto;
 }
 
 .content-box {
@@ -135,6 +137,7 @@ body {
 }
 
 .home-container {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -153,10 +156,17 @@ body {
   display: flex;
   gap: 30px;
   align-items: center;
+  height: 100%;
 }
 
 .content-section {
-  grid-column: 1 / 2;
+  width: 100%;
+  max-width: 1000px;
+  text-align: justify;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .image-section {
@@ -164,9 +174,11 @@ body {
 }
 
 .diagram-section {
+  width: 100%;
   display: flex;
-  align-items: center;
-  grid-column: 1 / 3;
+  justify-content: center;
+  margin: 15px 0;
+  flex: 1;
 }
 
 .content-section ol {
@@ -175,18 +187,25 @@ body {
 }
 
 .diagram-image {
-  margin: 0 auto;
-  max-width: 65%;
-  vertical-align: middle;
-  display: inline-block;
+  width: 54%;
   height: auto;
-  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
 }
 
 .large-text {
   font-size: 30px;
-  font-weight: bold;
-  margin-top: 0%;
+  font-weight: 600;
+  color: #1a1f36;
+  margin: 0 0 10px;
+  line-height: 1.3;
+  position: justify;
+  padding-bottom: 10px;
+  background: linear-gradient(120deg, #1a1f36, #4f5cd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .footnote {
@@ -199,11 +218,51 @@ body {
 
 .small-text {
   font-size: 17px;
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+  text-align: justify;
+}
+
+.small-text:last-child {
+  margin-bottom: 10px;
+}
+
+.small-text a {
+  color: #4f5cd4;
+  text-decoration: none;
+  border-bottom: 1px solid #4f5cd4;
+}
+
+.small-text a:hover {
+  color: #1a1f36;
 }
 
 .medium-text {
   font-size: 22px;
-  font-weight: bolder;
+  font-weight: 600;
+  color: #1a1f36;
+  margin: 25px 0 15px;
+}
+
+.citation-text {
+  font-size: 15px;
+  color: #333;
+  text-align: justify;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.citation-text {
+  font-size: 15px;
+  color: #666;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #4f5cd4;
+  margin-top: 20px;
+  line-height: 1.6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .button-group {
@@ -281,6 +340,19 @@ body {
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 @keyframes fadeIn {
@@ -428,4 +500,11 @@ body {
   .content-wrapper {
     padding: 10px;
   }
+}
+
+/* Remove loading animation styles */
+.loading-container,
+.loading-circle,
+.loading-text {
+  display: none;
 }

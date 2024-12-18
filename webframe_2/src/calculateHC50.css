@@ -1,0 +1,43 @@
+.calculate-hc50-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.upload-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.results-section {
+  margin-top: 20px;
+}
+
+.ant-table-wrapper {
+  margin-top: 20px;
+}
+
+.download-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.instruction-text {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.upload-dragger {
+  padding: 20px;
+  background: #fafafa;
+  border: 2px dashed #d9d9d9;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.upload-dragger:hover {
+  border-color: #1890ff;
+}

@@ -1,0 +1,22 @@
+.chemical-ecotoxicity-container {
+  text-align: center;
+  padding: 20px;
+  height: 82vh;
+}
+
+.chemical-ecotoxicity-card {
+  width: 300px;
+  height: 150px;
+  margin: 50px auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f2f5;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+}
+
+.chemical-ecotoxicity-select {
+  width: 200px;
+  margin-bottom: 20px;
+}

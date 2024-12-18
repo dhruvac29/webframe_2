@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Skeleton, Card, message, Upload, Button, Table } from "antd";
 import { UploadOutlined, ArrowDownOutlined } from "@ant-design/icons";
 import axios from "axios";
+import './calculateHC50.css';
 
 const CalculateHC50 = () => {
   const [loading, setLoading] = useState(true);

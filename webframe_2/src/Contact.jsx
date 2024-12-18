@@ -5,7 +5,28 @@ import {
   EnvironmentOutlined,
 } from "@ant-design/icons";
 import emailjs from "emailjs-com";
+import { motion } from "framer-motion";
 import "./Contact.css";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.5 }
+  }
+};
 
 const ContactUsPage = () => {
   const [form] = Form.useForm();
@@ -51,12 +72,18 @@ const ContactUsPage = () => {
   };
 
   return (
-    <>
-      <div className="contact-container">
-        <div className="contact-info">
-          <h2>Get in touch with us</h2>
-          <br />
-          <p>
+    <motion.div
+      className="contact-container"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.div className="contact-content" variants={itemVariants}>
+        <motion.h2 className="contact-title" variants={itemVariants}>
+          Get in touch with us
+        </motion.h2>
+        <motion.div className="contact-info" variants={itemVariants}>
+          <motion.p variants={itemVariants}>
             <h3>Dr. Yike Shen</h3>
             <MailOutlined />{" "}
             <a href="mailto:yike.shen@uta.edu">yike.shen@uta.edu</a>
@@ -64,9 +91,8 @@ const ContactUsPage = () => {
             Department of Earth and Environmental Sciences
             <br />
             <EnvironmentOutlined /> University of Texas at Arlington
-          </p>
-          <br />
-          <p>
+          </motion.p>
+          <motion.p variants={itemVariants}>
             <h3>Dr. Feng Gao</h3>
             <MailOutlined />{" "}
             <a href="mailto:gaofeng@ucla.edu">gaofeng@ucla.edu</a>
@@ -76,9 +102,9 @@ const ContactUsPage = () => {
             Department of Molecular and Medical Pharmacology
             <br />
             <EnvironmentOutlined /> University of California, Los Angeles
-          </p>
-        </div>
-        <div className="contact-form">
+          </motion.p>
+        </motion.div>
+        <motion.div className="contact-form" variants={itemVariants}>
           <Form
             form={form}
             name="contact"
@@ -134,9 +160,9 @@ const ContactUsPage = () => {
               </Button>
             </Form.Item>
           </Form>
-        </div>
-      </div>
-    </>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

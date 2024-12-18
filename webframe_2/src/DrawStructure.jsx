@@ -1,13 +1,14 @@
 import React from "react";
 import { Card } from "antd";
+import './DrawStructure.css';
 
 const DrawStructure = () => {
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <Card title="Draw Structure" style={{ width: "100%", height: "80vh" }}>
+    <div className="draw-structure-container">
+      <Card title="Draw Structure" className="structure-card">
         <iframe
           src="https://pubchem.vercel.app/"
-          style={{ width: "100%", height: "100%", border: "none" }}
+          className="structure-iframe"
           title="PubChem Structure Drawing Tool"
           sandbox="allow-scripts allow-same-origin"
         />
