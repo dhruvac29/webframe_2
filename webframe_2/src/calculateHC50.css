@@ -70,3 +70,38 @@
   border: 1px solid #d9d9d9;
   cursor: pointer;
 }
+
+.chemical-ecotoxicity-card {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: linear-gradient(120deg, #1a1f36, #4f5cd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.compact-button {
+  width: 150px !important;
+  padding: 8px 16px !important;
+  font-size: 14px !important;
+  height: auto !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(45deg, #4f5cd4, #1a1f36) !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  margin: 10px auto !important;
+}
+
+.compact-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 92, 212, 0.2);
+}
+
+.compact-button:active {
+  transform: translateY(0);
+}

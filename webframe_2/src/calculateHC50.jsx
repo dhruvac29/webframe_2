@@ -204,13 +204,16 @@ const CalculateHC50 = () => {
       >
         <Button icon={<UploadOutlined />}>Click to Upload</Button>
       </Upload>
-      <Button
-        type="primary"
-        style={{ marginTop: "20px" }}
-        onClick={handleRunClick}
-      >
-        Run
-      </Button>
+      <div className="run-button-container">
+        <Button
+          type="primary"
+          onClick={handleRunClick}
+          disabled={!fileList.length}
+          className="compact-button"
+        >
+          Run
+        </Button>
+      </div>
       {isRunClicked && csvUrl && (
         <div style={centeredStyle}>
           <a href={csvUrl} download="predicted_hc50_value.csv">
