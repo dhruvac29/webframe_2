@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Skeleton, Card, message, Upload, Button, Table } from "antd";
 import { UploadOutlined, ArrowDownOutlined } from "@ant-design/icons";
 import axios from "axios";
-import './calculateHC50.css';
+import "./calculateHC50.css";
 
 const CalculateHC50 = () => {
   const [loading, setLoading] = useState(true);
@@ -182,7 +182,7 @@ const CalculateHC50 = () => {
   return (
     <div style={{ textAlign: "center", padding: "20px" }}>
       <Skeleton loading={loading} active>
-        <Card style={cardStyle}>Chemical Ecotoxicity</Card>
+        <Card className="chemical-ecotoxicity-card">Chemical Ecotoxicity</Card>
       </Skeleton>
       <div style={centeredStyle}>
         <Button

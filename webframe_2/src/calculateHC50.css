@@ -1,6 +1,6 @@
 .calculate-hc50-container {
   padding: 20px;
-  max-width: 1200px;
+  max-width: 120px;
   margin: 0 auto;
 }
 
@@ -15,6 +15,23 @@
 
 .ant-table-wrapper {
   margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  position: relative;
+  overflow-y: auto;
+  height: 100%;
 }
 
 .download-button {
@@ -40,4 +57,16 @@
 
 .upload-dragger:hover {
   border-color: #1890ff;
+}
+
+.chemical-ecotoxicity-card {
+  width: 300px;
+  height: 150px;
+  margin: 50px auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f2f5;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
 }
