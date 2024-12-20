@@ -81,7 +81,7 @@ body {
 }
 
 .nav-link::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -100,6 +100,12 @@ body {
 
 .layout-container {
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  left: 0;
+  right: 0;
 }
 
 .container {
@@ -107,12 +113,18 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  width: 100%;
+  position: relative;
+  left: 0;
 }
 
 .content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  width: 100%;
+  position: relative;
+  left: 0;
 }
 
 .footer {
@@ -508,7 +520,23 @@ body {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
+  .layout-container,
+  .container,
+  .content,
+  .content-box {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    left: 0;
+    position: relative;
+  }
+
   .header {
+    width: 100%;
+    left: 0;
+    right: 0;
     padding: 15px;
     flex-direction: column;
     gap: 15px;
