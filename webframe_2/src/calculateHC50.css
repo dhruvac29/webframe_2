@@ -1,6 +1,6 @@
 .calculate-hc50-container {
   padding: 20px;
-  max-width: 1200px;
+  max-width: 120px;
   margin: 0 auto;
 }
 
@@ -15,6 +15,23 @@
 
 .ant-table-wrapper {
   margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  position: relative;
+  overflow-y: auto;
+  height: 100%;
 }
 
 .download-button {
@@ -40,4 +57,51 @@
 
 .upload-dragger:hover {
   border-color: #1890ff;
+}
+
+.chemical-ecotoxicity-card {
+  width: 300px;
+  height: 150px;
+  margin: 50px auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f2f5;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+}
+
+.chemical-ecotoxicity-card {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: linear-gradient(120deg, #1a1f36, #4f5cd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.compact-button {
+  width: 150px !important;
+  padding: 8px 16px !important;
+  font-size: 14px !important;
+  height: auto !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(45deg, #4f5cd4, #1a1f36) !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  margin: 10px auto !important;
+}
+
+.compact-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 92, 212, 0.2);
+}
+
+.compact-button:active {
+  transform: translateY(0);
 }
