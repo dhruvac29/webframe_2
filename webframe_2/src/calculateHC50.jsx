@@ -180,7 +180,7 @@ const CalculateHC50 = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
+    <div style={{ textAlign: "center", padding: "20px", height: "100%" }}>
       <Skeleton loading={loading} active>
         <Card className="chemical-ecotoxicity-card">Chemical Ecotoxicity</Card>
       </Skeleton>

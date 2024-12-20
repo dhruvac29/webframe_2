@@ -2,7 +2,7 @@ import React from "react";
 import './ChemicalEcotoxicity.css';
 import { Card, Select } from "antd";
 import { useNavigate } from "react-router-dom";
-import "./App.css"; // Import the CSS file
+// import "./App.css"; // Import the CSS file
 
 const { Option } = Select;
 
