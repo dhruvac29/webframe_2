@@ -2,15 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 60px;
-  min-height: 84vh;
+  padding: 0 40px;
+  min-height: 100%;
   height: calc(100vh - 300px);
   background: #fff;
   width: 100%;
   overflow: hidden;
-  margin-top: 0;
   box-sizing: border-box;
-  padding-bottom: 0px;
   position: relative;
 }
 
@@ -295,40 +293,83 @@
   transform: translateX(3px);
 }
 
+/* Media Queries */
 @media screen and (max-width: 1200px) {
   .contact-container {
-    padding: 0 40px;
+    padding: 0 30px;
+  }
+  
+  .contact-content {
+    max-width: 1000px;
+    gap: 20px;
   }
 }
 
 @media screen and (max-width: 992px) {
   .contact-container {
-    padding: 0 30px;
+    padding: 0 20px;
+    height: auto;
+    min-height: 100%;
   }
 
   .contact-content {
     grid-template-columns: 1fr;
     gap: 20px;
+    padding: 20px 0;
   }
 
   .contact-title h1.ant-typography {
     font-size: 24px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .contact-container {
-    padding: 0 20px;
-  }
-
-  .contact-title h1.ant-typography {
-    font-size: 22px;
     padding: 20px;
   }
 
   .contact-card,
   .form-card {
-    padding: 16px;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contact-container {
+    padding: 15px;
+  }
+
+  .contact-content {
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  .contact-title h1.ant-typography {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .contact-card,
+  .form-card {
+    padding: 12px;
+  }
+
+  .contact-detail {
+    font-size: 13px;
+  }
+
+  .contact-detail .icon {
+    font-size: 14px;
+  }
+
+  .ant-form-item {
+    margin-bottom: 12px;
+  }
+
+  .ant-input,
+  .ant-input-textarea {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .ant-btn-primary {
+    height: 36px;
+    font-size: 13px;
   }
 }
 
