@@ -130,12 +130,20 @@ body {
 .footer {
   text-align: center;
   background-color: #011529;
-  padding: 20px 0;
+  padding: 0;
   color: #fff;
-  width: 100%;
+  width: 100vw;
   border-top: 2px solid #1890ff;
   height: 60px;
-  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-bottom: 0;
 }
 
 .content-box {
@@ -609,17 +617,30 @@ body {
     width: 100%;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    padding: 15px 0;
+    padding: 0;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   }
 
   .content {
-    padding-bottom: 80px; /* Ensure content doesn't overlap footer */
+    padding-bottom: 0; /* Ensure content doesn't overlap footer */
   }
 
   .header,
   .footer {
     border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-bottom: 0;
+    padding: 0;
+    height: 50px;
   }
 }
 
